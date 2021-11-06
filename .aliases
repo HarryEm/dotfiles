@@ -12,6 +12,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 # Git
+alias v='vim'
 alias ga='git add'
 alias gc='git commit'
 alias gs='git status'
