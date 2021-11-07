@@ -21,6 +21,14 @@ alias gd='git diff'
 # Commonly used commands
 alias jn="jupyter notebook"
 
+# Copy last tmerinal command
+function cplast() {
+    fc -ln -1 | awk '{$1=$1}1' | pbcopy
+}
+
+# tmux
+alias tt='tmux a -t'
+
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
