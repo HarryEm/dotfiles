@@ -10,6 +10,7 @@ alias la='ls -A'
 # Aliases to protect against overwriting
 alias cp='cp -i'
 alias mv='mv -i'
+alias rm='rm -i'
 
 # Git
 alias v='vim'

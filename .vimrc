@@ -1,5 +1,3 @@
-" Comments in Vimscript start with a `"`.
-
 " If you open this file in Vim, it'll be syntax highlighted for you.
 
 " Vim is based on Vi. Setting `nocompatible` switches from the default
@@ -78,6 +76,11 @@ set tabstop=4           " use 4 spaces to represent tab
 set softtabstop=4
 set shiftwidth=4        " number of spaces to use for auto indent
 set autoindent          " copy indent from current line when starting a new line
+
+" but not for Makefile
+filetype plugin indent on
+filetype detect
+autocmd FileType make set noexpandtab
 
 " make backspaces more powerfull
 set backspace=indent,eol,start
