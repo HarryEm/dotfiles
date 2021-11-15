@@ -1,4 +1,3 @@
-# aliases
 source ~/.aliases
 
 # Path to your oh-my-zsh installation.
