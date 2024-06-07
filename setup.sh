@@ -1,7 +1,15 @@
 # create symlinks to home directory
-ln -sv "$HOME/.dotfiles/.aliases" $HOME
-ln -sv "$HOME/.dotfiles/.bashrc" $HOME
-ln -sv "$HOME/.dotfiles/.vimrc" $HOME
-ln -sv "$HOME/.dotfiles/.tmux.conf" $HOME
-ln -sv "$HOME/.dotfiles/.zshrc" $HOME
+declare -a arr=(".aliases" ".bashrc" ".vimrc" ".tmux.conf" ".zshrc")
+for i in "${arr[@]}" 
+do 
+    echo Adding sylink for "$i"
+    SOURCE="$HOME/dotfiles/$i"
+    TARGET="$HOME/$i"
+
+    if [ ! -f $TARGET ]; then
+        ln -sv $SOURCE $HOME
+    else
+        echo "$TARGET exists, remove or archive and run again"
+    fi
+done
 
