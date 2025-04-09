@@ -102,12 +102,5 @@ unset __conda_setup
 if [ -f ~/.local-exports ]; then
     source ~/.local-exports
 fi
-# export PATH="/Users/harryemeric/opt/anaconda3/bin:$PATH"
-#export PATH=/Users/harryemeric/Programming/google-cloud-sdk/bin:$PATH
-#export PATH=/usr/local/mysql/bin:$PATH
-#export PATH="$HOME/.npm-packages/bin:$PATH"
-# export PATH=/Applications/Postgres.app/Contents/MacOS:$PATH
-#export PATH=/Library/PostgreSQL/13/bin:$PATH
-#export PATH="/usr/local/sbin:$PATH"
-export PATH=/opt/homebrew/bin:$PATH
+
 
