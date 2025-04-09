@@ -21,6 +21,7 @@ alias gd='git diff'
 
 # Commonly used commands
 alias jn="jupyter notebook"
+alias venvon='source venv/bin/activate'
 
 # Copy last tmerinal command
 function cplast() {
