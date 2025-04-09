@@ -83,22 +83,20 @@ function virtualenv_info {
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# added by Anaconda3 2019.10 installer
-# >>> conda init >>>
+# >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/harryemeric/opt/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+__conda_setup="$('/opt/homebrew/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
+    eval "$__conda_setup"
 else
-    if [ -f "/Users/harryemeric/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/harryemeric/opt/anaconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
+    if [ -f "/opt/homebrew/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/anaconda3/etc/profile.d/conda.sh"
     else
-        \export PATH="/Users/harryemeric/opt/anaconda3/bin:$PATH"
+        export PATH="/opt/homebrew/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
-# <<< conda init <<<
+# <<< conda initialize <<<
 
 # Local exports for environment
 if [ -f ~/.local-exports ]; then
@@ -111,4 +109,5 @@ fi
 # export PATH=/Applications/Postgres.app/Contents/MacOS:$PATH
 #export PATH=/Library/PostgreSQL/13/bin:$PATH
 #export PATH="/usr/local/sbin:$PATH"
+export PATH=/opt/homebrew/bin:$PATH
 
