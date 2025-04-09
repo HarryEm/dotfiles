@@ -4,7 +4,7 @@ source ~/.aliases
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load
-ZSH_THEME="gozilla"
+ZSH_THEME="robbyrussell"
 
 # Set Spaceship ZSH as a prompt
 # autoload -U promptinit; promptinit
@@ -60,7 +60,7 @@ HIST_STAMPS="yyyy-mm-dd"
 source $ZSH/oh-my-zsh.sh
 
 function virtualenv_info { 
-[ $VIRTUAL_ENV ] && echo ‘(‘`basename $VIRTUAL_ENV`’) ‘ 
+[ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') ' 
 }
 
 # User configuration
