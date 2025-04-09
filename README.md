@@ -4,6 +4,10 @@
 
 Ensure zsh is default shell via `chsh -s $(which zsh)`
 
+Go to the theme and add this line for the venv prompt
+` vim ~/.oh-my-zsh/themes/robbyrussell.zsh-theme`
+`PROMPT+='%{$fg[green]%}$(virtualenv_info)%{$reset_color%}%'`
+
 ```sh
 cd ~
 git clone https://github.com/HarryEm/dotfiles.git
